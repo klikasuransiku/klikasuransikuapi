@@ -76,41 +76,41 @@ $.ajax({
 success
 ```sh
 {
-        "productType": "Health",
-        "productName": "SIJI Health 1 Plan E",
-        "listPremium": [
-            {
-                "minAge": 1,
-                "maxAge": 23,
-                "premium": 322000
-            },
-            {
-                "minAge": 24,
-                "maxAge": 45,
-                "premium": 831000
-            },
-            {
-                "minAge": 46,
-                "maxAge": 54,
-                "premium": 1298000
-            },
-            {
-                "minAge": 55,
-                "maxAge": 60,
-                "premium": 1603000
-            }
-        ],
-        "productShortDescription": null,
-        "productLongDescription": null,
-        "benefit": null,
-        "compensationForDeath": null,
-        "inpatient": "250000",
-        "outpatient": "500000",
-        "guaranteeAcceptance": null,
-        "medicFee": null,
-        "additionalfee": null,
-        "criticalilness": null,
-        "rop": null
-    }
+    "productType": "Health",
+    "productName": "SIJI Health 1 Plan E",
+    "listPremium": [
+        {
+            "minAge": 1,
+            "maxAge": 23,
+            "premium": 322000
+        },
+        {
+            "minAge": 24,
+            "maxAge": 45,
+            "premium": 831000
+        },
+        {
+            "minAge": 46,
+            "maxAge": 54,
+            "premium": 1298000
+        },
+        {
+            "minAge": 55,
+            "maxAge": 60,
+            "premium": 1603000
+        }
+    ],
+    "productShortDescription": null,
+    "productLongDescription": null,
+    "benefit": null,
+    "compensationForDeath": null,
+    "inpatient": "250000",
+    "outpatient": "500000",
+    "guaranteeAcceptance": null,
+    "medicFee": null,
+    "additionalfee": null,
+    "criticalilness": null,
+    "rop": null
+}
 ```
 
