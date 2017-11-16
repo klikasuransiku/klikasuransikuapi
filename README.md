@@ -19,3 +19,28 @@ POST
 |username| [text] |
 |password|[text] |
 
+#### Sample Call
+```sh
+$.ajax({
+    url: "/rest/v1/user/signin",
+    dataType: "json",
+    type : "POST",
+    data: {  
+        "username": "your_username",
+        "password":"your_password"
+    },
+    success : function(response) {
+      console.log(response);
+    }
+  });
+```
+
+#### Sample Response
+```sh
+{
+    "clienId": "5D89006A21776A45E050A8C04E0A33D8",
+    "token": "56c217cd-0bea-4f64-8ae2-2db0a71fea35"
+}
+```
+
+
