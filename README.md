@@ -76,6 +76,8 @@ $.ajax({
 success
 ```sh
 {
+    "productID": 13,
+    "productPackageID": 5,
     "productType": "Health",
     "productName": "SIJI Health 1 Plan E",
     "listPremium": [
