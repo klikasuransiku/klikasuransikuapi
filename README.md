@@ -116,3 +116,114 @@ success
 }
 ```
 
+#### Product Inquiry
+
+##### Features
+  - Submit aplication and generate policy
+
+##### Endpoint
+POST
+```sh
+/rest/v1/productinquiry
+```
+##### Sample Call:
+QJuery Ajax Call 
+```sh
+$.ajax({
+    url: "/rest/v1/getlistproductpaspol",
+    headers: {
+        "token": "5D89006A21776A45E050A8C04E0A33D8",
+        "clienId":"56c217cd-0bea-4f64-8ae2-2db0a71fea35"
+    }
+    dataType: "json",
+    type : "POST",
+    data: { 
+          "productID": "1",
+          "productPackageID": "1",
+          "premium": "7500",
+          "referenceCode": "PASPOLXX001",
+          "transactionDate": "31/01/2017",
+          "policyHolder": {
+            "firstName": "Jhon",
+            "lastName": "Dhoe",
+            "email": "jhon.doe@gmail.com",
+            "phone": "085667788990",
+            "NIK": "0923384958674349",
+            "dob": "02/07/1990",
+            "address": "Gedung Simas Jiwa Jl. Lombok No. 73 Jakarta Pusat 10350",
+            "sex": "pria/wanita",
+            "provinceID": "1",
+            "cityID": "1"
+          },
+          "insured": {
+            "firstName": "Jhon",
+            "lastName": "Dhoe",
+            "email": "jhon.doe@gmail.com",
+            "phone": "085667788990",
+            "NIK": "0923384958674349",
+            "dob": "02/07/1990",
+            "address": "Gedung Simas Jiwa Jl. Lombok No. 73 Jakarta Pusat 10350",
+            "sex": "pria/wanita",
+            "provinceID": "1",
+            "cityID": "1"
+          },
+          "beneficiary": {
+            "fullName": "Mika Dhoe",
+            "relation": "adik",
+            "dobBen": "02/07/1993"
+          }
+    },
+    success : function(response) {
+      console.log(response);
+    }
+  });
+``
+
+##### Sample response:
+success
+```sh
+{
+    "status": 200,
+    "message": "Success",
+    "data": {
+        "productID": 1,
+        "productPackageID": 1,
+        "premium": 7500,
+        "referenceCode": "PASPOLXX001",
+        "transactionDate": "31/01/2017",
+        "transactionDateDate": null,
+        "policyHolder": {
+            "firstName": "Jhon",
+            "lastName": "Dhoe",
+            "email": "jhon.doe@gmail.com",
+            "phone": "085667788990",
+            "dob": "02/07/1990",
+            "dobDate": null,
+            "address": "Gedung Simas Jiwa Jl. Lombok No. 73 Jakarta Pusat 10350",
+            "sex": "pria/wanita",
+            "provinceID": "1",
+            "cityID": "1",
+            "nik": "0923384958674349"
+        },
+        "insured": {
+            "firstName": "Jhon",
+            "lastName": "Dhoe",
+            "email": "jhon.doe@gmail.com",
+            "phone": "085667788990",
+            "dob": "02/07/1990",
+            "dobDate": null,
+            "address": "Gedung Simas Jiwa Jl. Lombok No. 73 Jakarta Pusat 10350",
+            "sex": "pria/wanita",
+            "provinceID": "1",
+            "cityID": "1",
+            "nik": "0923384958674349"
+        },
+        "beneficiary": {
+            "fullName": "Mika Dhoe",
+            "relation": "adik",
+            "dob": null,
+            "dobDate": null
+        }
+    }
+}
+```
