@@ -53,7 +53,7 @@ $.ajax({
 ##### Endpoint
 GET
 ```sh
-/rest/v1/getlistproductpaspol
+/rest/v1/getlistproductjagain
 ```
 ##### Sample Call:
 QJuery Ajax Call 
