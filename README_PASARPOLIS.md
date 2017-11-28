@@ -76,43 +76,35 @@ $.ajax({
 success
 ```sh
 {
-    "productID": 13,
-    "productPackageID": 5,
-    "productType": "Health",
-    "productName": "SIJI Health 1 Plan E",
-    "listPremium": [
+    "listProduct": [
         {
-            "minAge": 1,
-            "maxAge": 23,
-            "premium": 322000
-        },
-        {
-            "minAge": 24,
-            "maxAge": 45,
-            "premium": 831000
-        },
-        {
-            "minAge": 46,
-            "maxAge": 54,
-            "premium": 1298000
-        },
-        {
-            "minAge": 55,
-            "maxAge": 60,
-            "premium": 1603000
+            "productID": 1,
+            "productPackageID": 1,
+            "productType": "Personal Accident",
+            "productName": "Simas Protection Complete Plan A",
+            "productShortDescription": null,
+            "productLongDescription": null,
+            "benefit": null,
+            "rop": null,
+            "medicFee": null,
+            "outpatient": null,
+            "inpatient": null,
+            "discount": null,
+            "criticalilness": null,
+            "guaranteeAcceptance": "yes",
+            "compensationForDeath": "50000000",
+            "listPremium": [
+                {
+                    "maxAge": 64,
+                    "minAge": 1,
+                    "premium": 456000
+                }
+            ],
+            "additionalfee": null,
+            "voucherCode": "ULTAH2ASJ",
+            "discountType": null
         }
-    ],
-    "productShortDescription": null,
-    "productLongDescription": null,
-    "benefit": null,
-    "compensationForDeath": null,
-    "inpatient": "250000",
-    "outpatient": "500000",
-    "guaranteeAcceptance": null,
-    "medicFee": null,
-    "additionalfee": null,
-    "criticalilness": null,
-    "rop": null
+    ]
 }
 ```
 
@@ -130,7 +122,7 @@ POST
 QJuery Ajax Call 
 ```sh
 $.ajax({
-    url: "/rest/v1/getlistproductpaspol",
+    url: "/rest/v1/productinquiry",
     headers: {
         "token": "5D89006A21776A45E050A8C04E0A33D8",
         "clienId":"56c217cd-0bea-4f64-8ae2-2db0a71fea35"
@@ -143,6 +135,7 @@ $.ajax({
           "premium": "7500",
           "referenceCode": "PASPOLXX001",
           "transactionDate": "31/01/2017",
+          "voucherCode": "ULTAH2ASJ",
           "policyHolder": {
             "firstName": "Jhon",
             "lastName": "Dhoe",
@@ -186,44 +179,8 @@ success
     "status": 200,
     "message": "Success",
     "data": {
-        "productID": 1,
-        "productPackageID": 1,
-        "premium": 7500,
-        "referenceCode": "PASPOLXX001",
-        "transactionDate": "31/01/2017",
-        "transactionDateDate": null,
-        "policyHolder": {
-            "firstName": "Jhon",
-            "lastName": "Dhoe",
-            "email": "jhon.doe@gmail.com",
-            "phone": "085667788990",
-            "dob": "02/07/1990",
-            "dobDate": null,
-            "address": "Gedung Simas Jiwa Jl. Lombok No. 73 Jakarta Pusat 10350",
-            "sex": "pria/wanita",
-            "provinceID": "1",
-            "cityID": "1",
-            "nik": "0923384958674349"
-        },
-        "insured": {
-            "firstName": "Jhon",
-            "lastName": "Dhoe",
-            "email": "jhon.doe@gmail.com",
-            "phone": "085667788990",
-            "dob": "02/07/1990",
-            "dobDate": null,
-            "address": "Gedung Simas Jiwa Jl. Lombok No. 73 Jakarta Pusat 10350",
-            "sex": "pria/wanita",
-            "provinceID": "1",
-            "cityID": "1",
-            "nik": "0923384958674349"
-        },
-        "beneficiary": {
-            "fullName": "Mika Dhoe",
-            "relation": "adik",
-            "dob": null,
-            "dobDate": null
-        }
+        "referenceCode": "JAGAINXX001",
+        "linkpolicy": "https://klikasuransiku.com/policydownload/?uid=5D89006A21776A45E050A8C04E0A33D8&pid=5D89006A21776A45E050A8C04E0A44D8"
     }
 }
 ```
