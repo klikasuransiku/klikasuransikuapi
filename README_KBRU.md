@@ -133,7 +133,7 @@ $.ajax({
           "productID": "1",
           "productPackageID": "1",
           "premium": "7500",
-          "referenceCode": "PASPOLXX001",
+          "referenceCode": "JAGAINXX001",
           "transactionDate": "31/01/2017",
           "voucherCode": "ULTAH2ASJ",
           "policyHolder": {
