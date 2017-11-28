@@ -170,7 +170,7 @@ $.ajax({
       console.log(response);
     }
   });
-``
+```
 
 ##### Sample response:
 success
