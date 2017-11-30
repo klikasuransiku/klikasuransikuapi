@@ -170,7 +170,7 @@ $.ajax({
       console.log(response);
     }
   });
-``
+```
 
 ##### Sample response:
 success
@@ -179,7 +179,7 @@ success
     "status": 200,
     "message": "Success",
     "data": {
-        "referenceCode": "JAGAINXX001",
+        "referenceCode": "PASPOLXX001",
         "linkpolicy": "https://klikasuransiku.com/policydownload/?uid=5D89006A21776A45E050A8C04E0A33D8&pid=5D89006A21776A45E050A8C04E0A44D8"
     }
 }
