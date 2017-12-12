@@ -228,7 +228,7 @@ $.ajax({
 }
 ```
 
-#### List of Provinces
+### Get List of Provinces
 
 ##### Features
   - get all Province
@@ -291,6 +291,67 @@ success
         {
             "provinceName": "TIMOR TIMUR",
             "provinceId": "27"
+        }
+    ]
+}
+```
+
+### Get List City by Province
+
+##### Features
+  - get all City by Province
+
+##### Endpoint
+GET
+```sh
+/rest/v1/getCity/{province id}
+```
+##### Sample Call:
+QJuery Ajax Call 
+```sh
+$.ajax({
+    url: "/rest/v1/getCity/10",
+    headers: {
+        "token": "5D89006A21776A45E050A8C04E0A33D8",
+        "clienId":"56c217cd-0bea-4f64-8ae2-2db0a71fea35"
+    }
+    dataType: "json",
+    type : "GET",
+    success : function(response) {
+      console.log(response);
+    }
+  });
+```
+
+##### Sample response:
+success
+```sh
+{
+    "cityList": [
+        {
+            "provinceId": "10",
+            "cityId": "299",
+            "cityName": "BANDUNG"
+        },
+        {
+            "provinceId": "10",
+            "cityId": "692",
+            "cityName": "BANDUNG BARAT"
+        },
+        {
+            "provinceId": "10",
+            "cityId": "6",
+            "cityName": "BEKASI"
+        },
+        {
+            "provinceId": "10",
+            "cityId": "8",
+            "cityName": "BOGOR"
+        },
+        {
+            "provinceId": "10",
+            "cityId": "303",
+            "cityName": "CIAMIS"
         }
     ]
 }
