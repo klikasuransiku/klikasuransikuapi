@@ -218,7 +218,7 @@ $.ajax({
 |--|--|
 |name| [text] |
 |dob|[text] | format dd/MM/yyyy
-|hasil|[integer] 0 = untuk user tidak termasuk blacklist, 1 = jika user adalah user blacklist, jika user 1 maka transaksi tidak boleh di lanjutkan
+|hasil|[integer] 0 = untuk user tidak termasuk blacklist, 1 = jika user adalah user blacklist dan transaksi tidak boleh di lanjutkan
 
 ```sh
 {
@@ -227,3 +227,72 @@ $.ajax({
     "hasil": 1
 }
 ```
+
+#### List of Provinces
+
+##### Features
+  - get all Province
+
+##### Endpoint
+GET
+```sh
+/rest/v1/getProvince
+```
+##### Sample Call:
+QJuery Ajax Call 
+```sh
+$.ajax({
+    url: "/rest/v1/getProvince",
+    headers: {
+        "token": "5D89006A21776A45E050A8C04E0A33D8",
+        "clienId":"56c217cd-0bea-4f64-8ae2-2db0a71fea35"
+    }
+    dataType: "json",
+    type : "GET",
+    success : function(response) {
+      console.log(response);
+    }
+  });
+```
+
+##### Sample response:
+success
+```sh
+{
+    "provinceList": [
+        {
+            "provinceName": "-",
+            "provinceId": "0"
+        },
+        {
+            "provinceName": "BALI",
+            "provinceId": "14"
+        },
+        {
+            "provinceName": "BANGKA BELITUNG",
+            "provinceId": "34"
+        },
+        {
+            "provinceName": "BANTEN",
+            "provinceId": "33"
+        },
+        {
+            "provinceName": "BENGKULU",
+            "provinceId": "8"
+        },
+        {
+            "provinceName": "DAERAH ISTIMEWA YOGYAKARTA",
+            "provinceId": "12"
+        },
+        {
+            "provinceName": "DKI JAKARTA",
+            "provinceId": "9"
+        },
+        {
+            "provinceName": "TIMOR TIMUR",
+            "provinceId": "27"
+        }
+    ]
+}
+```
+
