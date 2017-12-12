@@ -184,3 +184,46 @@ success
     }
 }
 ```
+### Check Blacklist
+##### Endpoint
+POST
+```sh
+/rest/v1/cekblacklist
+```
+
+#### URL Params Required:
+| Params | Data Type |
+|--|--|
+|name| [text] |
+|dob|[text] | format dd/MM/yyyy
+
+#### Sample Call
+```sh
+$.ajax({
+    url: "/rest/v1/cekblacklist",
+    dataType: "json",
+    type : "POST",
+    data: {  
+        "name": "SUYATNO",
+        "dob": "29/10/1964"
+    },
+    success : function(response) {
+      console.log(response);
+    }
+  });
+```
+
+#### Sample Response
+| Params | Data Type |
+|--|--|
+|name| [text] |
+|dob|[text] | format dd/MM/yyyy
+|hasil|[integer] 0 = untuk user tidak termasuk blacklist, 1 = jika user adalah user blacklist, jika user 1 maka transaksi tidak boleh di lanjutkan
+
+```sh
+{
+    "name": "SUYATNO",
+    "dob": "29/10/1964",
+    "hasil": 1
+}
+```
