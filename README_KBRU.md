@@ -3,6 +3,10 @@
 # klikasuransiku_api
 
 ##### URLS
+Production
+```sh
+http://api.simasjiwa.com/
+```
 Development
 ```sh
 http://www.simasjiwa.id/apiuat/
