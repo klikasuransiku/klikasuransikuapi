@@ -8,45 +8,7 @@ Development
 http://www.simasjiwa.id/apiuat/
 ```
 
-### Authentication
-##### Endpoint
-POST
-```sh
-/rest/v1/user/signin
-```
-
-#### URL Params Required:
-| Params | Data Type |
-|--|--|
-|username| [text] |
-|password|[text] |
-
-#### Sample Call
-```sh
-$.ajax({
-    url: "/rest/v1/user/signin",
-    dataType: "json",
-    type : "POST",
-    data: {  
-        "username": "your_username",
-        "password":"your_password"
-    },
-    success : function(response) {
-      console.log(response);
-    }
-  });
-```
-
-#### Sample Response
-```sh
-{
-    "clienId": "5D89006A21776A45E050A8C04E0A33D8",
-    "token": "56c217cd-0bea-4f64-8ae2-2db0a71fea35"
-}
-```
-
-#### List of Products
-
+### List of Products
 ##### Features
   - get all products
 
@@ -179,8 +141,9 @@ success
     "status": 200,
     "message": "Success",
     "data": {
+        "linkPolicy": "https://klikasuransiku.com/downloadDirectPolicy?transIdMerchant=2017122803041&uid=5D89006A21776A45E050A8C04E0A33D8&pid=e3d46ec4-277e-4eaf-addb-04d9c604ba3d",
         "referenceCode": "PASPOLXX001",
-        "linkpolicy": "https://klikasuransiku.com/policydownload/?uid=5D89006A21776A45E050A8C04E0A33D8&pid=5D89006A21776A45E050A8C04E0A44D8"
+        "policyNo": "171950000017"
     }
 }
 ```
