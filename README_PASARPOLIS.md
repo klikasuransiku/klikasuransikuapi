@@ -131,7 +131,128 @@ success
     ]
 }
 ```
+### List of Products Health
+##### Features
+  - get all products health
 
+##### Endpoint
+GET
+```sh
+/rest/v1/getlistproducthealth
+```
+##### Sample Call:
+QJuery Ajax Call 
+```sh
+$.ajax({
+    url: "/rest/v1/getlistproducthealth",
+    headers: {
+        "token": "5D89006A21776A45E050A8C04E0A33D8",
+        "clienId":"56c217cd-0bea-4f64-8ae2-2db0a71fea35"
+    }
+    dataType: "json",
+    type : "GET",
+    success : function(response) {
+      console.log(response);
+    }
+  });
+```
+
+##### Sample response:
+success
+```sh
+{
+    "listProduct": [
+        {
+            "productID": 1,
+            "productPackageID": 1,
+            "productType": "Personal Accident",
+            "productName": "Simas Protection Complete Plan A",
+            "productShortDescription": null,
+            "productLongDescription": null,
+            "benefit": null,
+            "rop": null,
+            "medicFee": null,
+            "outpatient": null,
+            "inpatient": null,
+            "discount": null,
+            "criticalilness": null,
+            "guaranteeAcceptance": "yes",
+            "compensationForDeath": "50000000",
+            "listPremium": [
+                {
+                    "maxAge": 64,
+                    "minAge": 1,
+                    "premium": 456000
+                }
+            ],
+            "additionalfee": null,
+            "voucherCode": "ULTAH2ASJ",
+            "discountType": null
+        }
+    ]
+}
+```
+### List of Products Life
+##### Features
+  - get all products Life
+
+##### Endpoint
+GET
+```sh
+/rest/v1/getlistproductlife
+```
+##### Sample Call:
+QJuery Ajax Call 
+```sh
+$.ajax({
+    url: "/rest/v1/getlistproductlife",
+    headers: {
+        "token": "5D89006A21776A45E050A8C04E0A33D8",
+        "clienId":"56c217cd-0bea-4f64-8ae2-2db0a71fea35"
+    }
+    dataType: "json",
+    type : "GET",
+    success : function(response) {
+      console.log(response);
+    }
+  });
+```
+
+##### Sample response:
+success
+```sh
+{
+    "listProduct": [
+        {
+            "productID": 1,
+            "productPackageID": 1,
+            "productType": "Personal Accident",
+            "productName": "Simas Protection Complete Plan A",
+            "productShortDescription": null,
+            "productLongDescription": null,
+            "benefit": null,
+            "rop": null,
+            "medicFee": null,
+            "outpatient": null,
+            "inpatient": null,
+            "discount": null,
+            "criticalilness": null,
+            "guaranteeAcceptance": "yes",
+            "compensationForDeath": "50000000",
+            "listPremium": [
+                {
+                    "maxAge": 64,
+                    "minAge": 1,
+                    "premium": 456000
+                }
+            ],
+            "additionalfee": null,
+            "voucherCode": "ULTAH2ASJ",
+            "discountType": null
+        }
+    ]
+}
+```
 #### Product Inquiry
 
 ##### Features
