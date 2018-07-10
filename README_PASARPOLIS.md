@@ -8,6 +8,49 @@ Development
 http://www.simasjiwa.id/apiuat/
 ```
 
+
+### Sign In
+##### Endpoint
+POST
+```sh
+/rest/v1/user/signin
+```
+
+#### URL Params Required:
+| Params | Data Type |
+|--|--|
+|username| [text] |
+|password|[text] | 
+
+#### Sample Call
+```sh
+$.ajax({
+    url: "/rest/v1/user/signin",
+    dataType: "json",
+    type : "POST",
+    data: {  
+        "username": "namauser",
+        "password": "password"
+    },
+    success : function(response) {
+      console.log(response);
+    }
+  });
+```
+
+#### Sample Response
+| Params | Data Type |
+|--|--|
+|clientId| [text] |
+|token|[text] | 
+
+```sh
+{
+    "clientId": "5D89996A21776A85E070U8C04E0A33D8",
+    "token": "d64dcfe5-1cgg-4981-b7bc-7c8a1o589bda"
+}
+```
+
 ### List of Products
 ##### Features
   - get all products
