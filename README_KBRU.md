@@ -2,16 +2,6 @@
 
 # klikasuransiku_api
 
-##### URLS
-Production
-```sh
-http://api.simasjiwa.com/
-```
-Development
-```sh
-http://www.simasjiwa.id/apiuat/
-```
-
 ### Authentication
 ##### Endpoint
 POST
@@ -59,6 +49,14 @@ GET
 ```sh
 /rest/v1/getlistproductjagain
 ```
+
+#### URL Params Required:
+##### -Header
+| Params | Data Type | Mandatory | Length | Description |
+|--|--|--|--|--|
+|token| [text] | Y | | |
+|clienId|[text] | Y | | |
+
 ##### Sample Call:
 QJuery Ajax Call 
 ```sh
@@ -122,6 +120,49 @@ POST
 ```sh
 /rest/v1/productinquiry
 ```
+#### URL Params Required:
+##### -Header
+| Params | Data Type | Mandatory | Length | Description |
+|--|--|--|--|--|
+|token| [text] | Y | | |
+|clienId|[text] | Y | | |
+
+##### -Body
+| Params | | Data Type | Mandatory | Length | Description |
+|--|--|--|--|--|--|
+|productID| | [number] | Y | | |
+|productPackageId| |[number] | Y | | |
+|premium| |[number]| Y | | |
+|referenceCode| |[text] | Y | 20 | |
+|transactionDate| |[date] | Y | | format dd/MM/yyyy |
+|voucherCode| |[text] | N | 20 | |
+|policyHolder| |[jsonObject] | Y | | |
+|| firstName |[text] | Y | 50 | |
+|| lastName |[text] | N | 50 | |
+|| email |[text] | Y | 50 | |
+|| phone |[text] | Y | | |
+|| NIK |[text] | Y | 16 | |
+|| dob |[date] | Y | | format dd/MM/yyyy|
+|| address |[text] | Y | 200 | |
+|| sex |[text] | Y | | e.x pria, wanita |
+|| provinceId |[text] | Y | |  |
+|| cityId |[text] | Y | | |
+|insured| |[jsonObject] | Y | | |
+|| firstName |[text] | Y | 50 | |
+|| lastName |[text] | N | 50 | |
+|| email |[text] | Y | | 50 |
+|| phone |[text] | Y | | |
+|| NIK |[text] | Y | 16 | |
+|| dob |[date] | Y | | format dd/MM/yyyy|
+|| address |[text] | Y | 200 | |
+|| sex |[text] | Y | | e.x pria, wanita |
+|| provinceId |[text] | Y | |  |
+|| cityId |[text] | Y | | |
+|beneficiary| |[jsonObject] | Y | | |
+|| fullName |[text] | Y | 50 | |
+|| relation |[text] | Y | |e.x  istri, suami, anak, ayah, ibu, kakak, adik, orang tua|
+|| dob |[date] | Y | | format dd/MM/yyyy|
+
 ##### Sample Call:
 QJuery Ajax Call 
 ```sh
@@ -196,10 +237,16 @@ POST
 ```
 
 #### URL Params Required:
-| Params | Data Type |
-|--|--|
-|name| [text] |
-|dob|[text] | format dd/MM/yyyy
+##### -Header
+| Params | Data Type | Mandatory | Length | Description |
+|--|--|--|--|--|
+|token| [text] | Y | | |
+|clienId|[text] | Y | | 
+##### -Body
+| Params | Data Type | Mandatory | Length | Description |
+|--|--|--|--|--|
+|name| [text] | Y | 50 | format dd/MM/yyyy |
+|dob|[text] | | Y | | format dd/MM/yyyy |
 
 #### Sample Call
 ```sh
@@ -242,6 +289,13 @@ GET
 ```sh
 /rest/v1/getProvince
 ```
+#### URL Params Required:
+##### -Header
+| Params | Data Type | Mandatory | Length | Description |
+|--|--|--|--|--|
+|token| [text] | Y | | |
+|clienId|[text] | Y | |
+
 ##### Sample Call:
 QJuery Ajax Call 
 ```sh
@@ -310,6 +364,14 @@ GET
 ```sh
 /rest/v1/getCity/{province id}
 ```
+
+#### URL Params Required:
+##### -Header
+| Params | Data Type | Mandatory | Length | Description |
+|--|--|--|--|--|
+|token| [text] | Y | | |
+|clienId|[text] | Y | |
+
 ##### Sample Call:
 QJuery Ajax Call 
 ```sh
