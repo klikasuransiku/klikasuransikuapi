@@ -23,8 +23,8 @@ $.ajax({
     dataType: "json",
     type : "POST",
     data: {  
-        "username": "namauser",
-        "password": "password"
+        "username": "your_username",
+        "password":"your_password"
     },
     success : function(response) {
       console.log(response);
