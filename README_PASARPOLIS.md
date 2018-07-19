@@ -456,7 +456,7 @@ POST
 | Params | Data Type | Mandatory | Length | Description |
 |--|--|--|--|--|
 |name| [text] | Y | 50 | format dd/MM/yyyy |
-|dob|[text] | | Y | | format dd/MM/yyyy |
+|dob|[text] | Y | | format dd/MM/yyyy |
 
 #### Sample Call
 ```sh
