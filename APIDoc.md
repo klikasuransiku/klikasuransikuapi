@@ -416,7 +416,7 @@ $.ajax({
           "beneficiary": {
             "fullName": "Mika Dhoe",
             "relation": "adik",
-            "dobBen": "02/07/1993"
+            "dob": "02/07/1993"
           }
     },
     success : function(response) {
