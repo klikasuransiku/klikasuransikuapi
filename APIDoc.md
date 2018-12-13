@@ -633,3 +633,48 @@ success
     ]
 }
 ```
+### Check Nik
+##### Endpoint
+POST
+```sh
+/rest/v1/cekNik
+```
+
+#### URL Params Required:
+##### -Header
+| Params | Data Type | Mandatory | Length | Description |
+|--|--|--|--|--|
+|token| [text] | Y | | |
+|clienId|[text] | Y | | 
+##### -Body
+| Params | Data Type | Mandatory | Length | Description |
+|--|--|--|--|--|
+|noId| [text] | Y | 50 |  |
+|dob|[text] | Y | | format dd/MM/yyyy |
+|jenisKelamin|[text] | Y | | |
+
+#### Sample Call
+```sh
+$.ajax({
+    url: "/rest/v1/cekNik",
+    dataType: "json",
+    type : "POST",
+    data: {
+    "noId": "3173052910640005",
+    "dob": "29\/10\/1964",
+    "jenisKelamin": "pria"
+},
+    success : function(response) {
+      console.log(response);
+    }
+  });
+```
+
+#### Sample Response
+| Data Type |
+|--|
+|[boolean] | true = valid, false = tidak valid
+
+```sh
+true
+```
