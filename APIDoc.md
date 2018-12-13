@@ -649,9 +649,9 @@ POST
 ##### -Body
 | Params | Data Type | Mandatory | Length | Description |
 |--|--|--|--|--|
-|noId| [text] | Y | 50 |  |
+|noId| [text] | Y | 16 |  |
 |dob|[text] | Y | | format dd/MM/yyyy |
-|jenisKelamin|[text] | Y | | |
+|jenisKelamin|[text] | Y | | pria/male |
 
 #### Sample Call
 ```sh
