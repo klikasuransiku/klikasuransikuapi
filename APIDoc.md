@@ -671,9 +671,9 @@ $.ajax({
 ```
 
 #### Sample Response
-| Data Type |
-|--|
-|[boolean] | true = valid, false = tidak valid
+| Data Type ||
+|--||
+|[boolean] | true = valid, false = tidak valid|
 
 ```sh
 true
