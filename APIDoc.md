@@ -726,7 +726,7 @@ POST
 |inpatient|[number] | Y | | e.x 1 = yes; 0 = no |
 |healthy| [number] | Y |  | e.x 1 = yes; 0 = no |
 |pregnant|[number] | Y | | e.x 1 = yes; 0 = no |
-|insuredSex|[number] | Y | | e.x pria/male; wanita/female |
+|insuredSex|[text] | Y | | e.x pria/male; wanita/female |
 
 #### Sample Call
 ```sh
