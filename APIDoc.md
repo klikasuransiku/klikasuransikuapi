@@ -370,6 +370,17 @@ POST
 || fullName |[text] | Y | 50 | |
 || relation |[text] | Y | |e.x  istri, suami, anak, ayah, ibu, kakak, adik, orang tua|
 || dob |[date] | Y | | format dd/MM/yyyy|
+|responsePertanyaan| |[jsonObject] | Y | | |
+|| criticalIllness |[number] | Y | 50 | e.x 1 = yes; 0 = no|
+|| activity |[number] | Y | | e.x 1 = yes; 0 = no|
+|| extraPremi |[number] | Y | | e.x 1 = yes; 0 = no|
+|| tinggi |[number] | Y | | in cm e.x 150 |
+|| berat |[number] | Y | | in kg e.x  50|
+|| inpatient |[number] | Y | | e.x 1 = yes; 0 = no|
+|| healty |[number] | Y | | e.x 1 = yes; 0 = no|
+|| pregnant |[number] | Y | | e.x 1 = yes; 0 = no|
+|| prenatal |[number] | Y | | e.x 1 = yes; 0 = no|
+|| insuredSex |[text] | Y | | e.x pria, wanita|
 
 ##### Sample Call:
 QJuery Ajax Call 
@@ -417,6 +428,18 @@ $.ajax({
             "fullName": "Mika Dhoe",
             "relation": "adik",
             "dob": "02/07/1993"
+          },
+          "responsePertanyaan":{
+            "criticalIllness":0,
+            "activity":0,
+            "extraPremi":0,
+            "tinggi":155,
+            "berat":67,
+            "inpatient":0,
+            "healthy":1,
+            "pregnant":1,
+            "prenatal":1,
+            "insuredSex":"female"
           }
     },
     success : function(response) {
@@ -664,6 +687,65 @@ $.ajax({
     "dob": "29\/10\/1964",
     "jenisKelamin": "pria"
 },
+    success : function(response) {
+      console.log(response);
+    }
+  });
+```
+
+#### Sample Response
+| Data Type | |
+|--|--|
+|[boolean] | true = valid, false = tidak valid|
+
+```sh
+true
+```
+
+### Check Response Pertanyaan
+##### Endpoint
+POST
+```sh
+/rest/v1/getValidatePertanyaan
+```
+
+#### URL Params Required:
+##### -Header
+| Params | Data Type | Mandatory | Length | Description |
+|--|--|--|--|--|
+|token| [text] | Y | | |
+|clienId|[text] | Y | | 
+##### -Body
+| Params | Data Type | Mandatory | Length | Description |
+|--|--|--|--|--|
+|criticalIllness| [number] | Y | | e.x 1 = yes; 0 = no |
+|activity|[number] | Y | | e.x 1 = yes; 0 = no |
+|extraPremi|[number] | Y | | e.x 1 = yes; 0 = no |
+|tinggi| [number] | Y |  | e.x 1 = yes; 0 = no |
+|berat|[number] | Y | | e.x 1 = yes; 0 = no |
+|inpatient|[number] | Y | | e.x 1 = yes; 0 = no |
+|healthy| [number] | Y |  | e.x 1 = yes; 0 = no |
+|pregnant|[number] | Y | | e.x 1 = yes; 0 = no |
+|insuredSex|[number] | Y | | e.x pria/male; wanita/female |
+
+#### Sample Call
+```sh
+$.ajax({
+    url: "/rest/v1/cekNik",
+    dataType: "json",
+    type : "POST",
+    data: {
+        "criticalIllness":0,
+        "activity":0,
+        "extraPremi":0,
+        "tinggi":155,
+        "berat":67,
+        "inpatient":0,
+        "healthy":1,
+        "pregnant":1,
+        "prenatal":1,
+        "insuredSex":"female"
+    },
     success : function(response) {
       console.log(response);
     }
