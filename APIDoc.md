@@ -470,6 +470,41 @@ failed
     "data": null
 }
 ```
+```sh
+{
+    "status": 400,
+    "message": "Nomor Identitas Tertanggung tidak Valid",
+    "data": null
+}
+```
+```sh
+{
+    "status": 400,
+    "message": "Mohon maaf data tersebut masuk dalam daftar blacklist kami",
+    "data": null
+}
+```
+```sh
+{
+    "status": 400,
+    "message": "Gagal Input Polis",
+    "data": null
+}
+```
+```sh
+{
+    "status": 400,
+    "message": "Pertanyaan Kesehatan tidak Valid",
+    "data": null
+}
+```
+```sh
+{
+    "status": 400,
+    "message": "Proses Simultan Gagal",
+    "data": null
+}
+```
 
 ### Check Blacklist
 ##### Endpoint
