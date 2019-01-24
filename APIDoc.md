@@ -462,6 +462,15 @@ success
 }
 ```
 
+failed
+```sh
+{
+    "status": 400,
+    "message": "Nomor Identitas Pemegang Polis tidak Valid",
+    "data": null
+}
+```
+
 ### Check Blacklist
 ##### Endpoint
 POST
