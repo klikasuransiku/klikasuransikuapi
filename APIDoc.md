@@ -465,42 +465,42 @@ success
 failed
 ```sh
 {
-    "status": 400,
+    "status": 601,
     "message": "Nomor Identitas Pemegang Polis tidak Valid",
     "data": null
 }
 ```
 ```sh
 {
-    "status": 400,
+    "status": 602,
     "message": "Nomor Identitas Tertanggung tidak Valid",
     "data": null
 }
 ```
 ```sh
 {
-    "status": 400,
+    "status": 600,
     "message": "Mohon maaf data tersebut masuk dalam daftar blacklist kami",
     "data": null
 }
 ```
 ```sh
 {
-    "status": 400,
+    "status": 401,
     "message": "Gagal Input Polis",
     "data": null
 }
 ```
 ```sh
 {
-    "status": 400,
+    "status": 603,
     "message": "Pertanyaan Kesehatan tidak Valid",
     "data": null
 }
 ```
 ```sh
 {
-    "status": 400,
+    "status": 604,
     "message": "Proses Simultan Gagal",
     "data": null
 }
